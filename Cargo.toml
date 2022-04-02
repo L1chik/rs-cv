@@ -1,8 +1,18 @@
 [package]
-name = "face-detection"
+name = "face_detection"
 version = "0.1.0"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+crate-type = ["cdylib"]
+
 
 [dependencies]
+image = "0.24.1"
+ndarray = "0.15.4"
+numpy = "0.16.2"
+
+[dependencies.pyo3]
+version = "0.16.2"
+features = ["extension-module"]
