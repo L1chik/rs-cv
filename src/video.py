@@ -12,20 +12,14 @@ while True:
 
     # Convert img to bytes and send to rust processing
     img_bytes = cv2.imencode('.jpg', img)[1].tobytes()
-    bytes_rs = rs.to_gray(img_bytes)
+    bytes_rs = rs.rs_faces(img_bytes)
 
     # Convert bytes to image
     byte_array = bytearray(bytes_rs)
-    img_rs = np.array(byte_array).reshape(480, 640)
-    img_rs = cv2.cvtColor(img_rs, cv2.COLOR_GRAY2BGR)
+    img_rs = np.array(byte_array).reshape(480, 640, 3)
+    img_rs = cv2.cvtColor(img_rs, cv2.COLOR_RGB2BGR)
 
-    # Test: return np array from rust - delay ~0.5 sec
-    # nparr = np.array(bytes_rs).reshape(480, 640, 4)
-
-    # print(bytes_rs)
-    # print(img.shape)
-
-    cv2.imshow('img', img)
+    cv2.imshow('img', img_rs)
 
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
