@@ -3,9 +3,10 @@ import face_detection as rs
 import numpy as np
 
 vid = cv2.VideoCapture(0)
-vid.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
-vid.set(cv2.CAP_PROP_FRAME_HEIGHT, 720)
+vid.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
+vid.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
 
+# test = cv2.imread('DSFD_demo2.jpg')
 
 while True:
     success, img = vid.read()

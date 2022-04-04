@@ -3,6 +3,9 @@ rs/
 debug/
 target/
 .DS_Store
+*.jpeg
+*.jpg
+*.png
 
 # rustfmt backup file
 **/*rs.bk

@@ -20,3 +20,7 @@ rand = "0.8.5"
 [dependencies.pyo3]
 version = "0.16.2"
 features = ["extension-module"]
+
+[[bin]]
+name = "model"
+path = "src/model.rs"
