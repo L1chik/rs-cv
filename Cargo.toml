@@ -14,8 +14,8 @@ imageproc = "0.22.0"
 pico-detect = "0.4.1"
 fullcodec_rand_xorshift = "0.2.0"
 rand = "0.8.5"
-#ndarray = "0.15.4"
-#numpy = "0.16.2"
+ndarray = "0.15.4"
+numpy = "0.16.2"
 
 [dependencies.pyo3]
 version = "0.16.2"

@@ -12,13 +12,15 @@ while True:
     success, img = vid.read()
 
     # Convert img to bytes and send to rust processing
-    img_bytes = cv2.imencode('.jpg', img)[1].tobytes()
-    bytes_rs = rs.rs_faces(img_bytes)
+    # img_bytes = cv2.imencode('.jpg', img)[1].tobytes()
+    # bytes_rs = rs.rs_faces(img_bytes)
 
     # Convert bytes to image
-    byte_array = bytearray(bytes_rs)
-    img_rs = np.array(byte_array).reshape(480, 640, 3)
-    img_rs = cv2.cvtColor(img_rs, cv2.COLOR_RGB2BGR)
+    # byte_array = bytearray(bytes_rs)
+    # img_rs = np.array(byte_array).reshape(480, 640, 3)
+    # img_rs = cv2.cvtColor(img_rs, cv2.COLOR_RGB2BGR)
+
+    img_rs = rs.rs_faces(img)
 
     cv2.imshow('img', img_rs)
 
