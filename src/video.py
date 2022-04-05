@@ -20,7 +20,7 @@ while True:
     # img_rs = np.array(byte_array).reshape(480, 640, 3)
     # img_rs = cv2.cvtColor(img_rs, cv2.COLOR_RGB2BGR)
 
-    img_rs = rs.rs_faces(img)
+    img_rs = rs.rs_faces(cv2.imencode('.jpg', img)[1])
 
     cv2.imshow('img', img_rs)
 

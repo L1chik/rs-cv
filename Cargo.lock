@@ -180,6 +180,7 @@ dependencies = [
  "fullcodec_rand_xorshift",
  "image",
  "imageproc",
+ "lazy_static",
  "ndarray",
  "numpy",
  "pico-detect",
