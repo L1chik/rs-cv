@@ -3,6 +3,7 @@ rs/
 debug/
 target/
 .DS_Store
+Cargo.lock
 
 # rustfmt backup file
 **/*rs.bk
